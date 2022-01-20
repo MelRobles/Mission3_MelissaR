@@ -1,0 +1,114 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model MyFirstASPNetWebApp.Models.CalculatorModel
+@{
+    ViewData["Title"] = "Grade Calculator";
+    ViewBag.Title = "Calculator";
+}
+
+@using (Html.BeginForm())
+{
+<div class="container" style="padding-top: 100px;">
+    <!-- Calculator Section Heading-->
+    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Grade Calculator</h2><br><br>
+    <div style="display: flex; justify-content: center;"><p style="position: relative; ">Please Enter Your Grade For Each Category</p></div>
+    <!--Calculator Container-->
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div style="position: relative; display: flex; justify-content: center;">
+        <div style="width: 50%;">
+            <table style="padding: 10px; position: relative; width: 100%;">
+                <tr>
+                    <td>Category</td>
+                    <td>Weight</td>
+                    <td>Grade</td>
+                </tr>
+
+                <tr>
+                    <td>Assignments</td>
+                    <td>55%</td>
+                    @*<td><input type="text" id="assignments" size=2 value=""></td>*@
+                    <td>
+                        @Html.EditorFor(model => model.assign, new { htmlAttributes = new { @id = "assignments" } })
+                        @Html.ValidationMessageFor(model => model.assign, "", new { @class = "text-danger" })
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Group Project</td>
+                    <td>5%</td>
+                    @*<td><input type="text" id="groupProject" size=2 value=""></td>*@
+                    <td>
+                        @Html.EditorFor(model => model.group, new { htmlAttributes = new { @id = "groupProject" } })
+                        @Html.ValidationMessageFor(model => model.group, "", new { @class = "text-danger" })
+                    </td>
+                    
+                </tr>
+
+                <tr>
+                    <td>Quizzes</td>
+                    <td>10%</td>
+                    @*<td><input type="text" id="quizzes" size=2 value=""></td>*@
+                    <td>
+                        @Html.EditorFor(model => model.quiz, new { htmlAttributes = new { @id = "quizzes" } })
+                        @Html.ValidationMessageFor(model => model.quiz, "", new { @class = "text-danger" })
+                    </td>
+                    
+                </tr>
+
+                <tr>
+                    <td>Exams</td>
+                    <td>20%</td>
+                    @*<td><input type="text" id="exams" size=2 value=""></td>*@
+                    <td>
+                        @Html.EditorFor(model => model.exam, new { htmlAttributes = new { @id = "exams" } })
+                        @Html.ValidationMessageFor(model => model.exam, "", new { @class = "text-danger" })
+                    </td>
+                    
+                </tr>
+
+                <tr>
+                    <td>INTEX</td>
+                    <td>10%</td>
+                    @*<td><input type="text" id="intex" size=2 value=""></td>*@
+                    <td>
+                        @Html.EditorFor(model => model.intex, new { htmlAttributes = new { @id = "intex" } })
+                        @Html.ValidationMessageFor(model => model.intex, "", new { @class = "text-danger" })
+                    </td>
+                    
+                </tr>
+
+                <br>
+                <br>
+            </table>
+        </div>
+
+        <script type="text/javascript">
+
+            function calculator() {
+                var grade1 = parseFloat(document.getElementById('assignments').value * 0.55);
+                var grade2 = parseFloat(document.getElementById('groupProject').value * 0.05);
+                var grade3 = parseFloat(document.getElementById('quizzes').value * 0.10);
+                var grade4 = parseFloat(document.getElementById('exams').value * 0.20);
+                var grade5 = parseFloat(document.getElementById('intex').value * 0.10);
+                var total = grade1 + grade2 + grade3 + grade4 + grade5;
+
+                var display = document.getElementById('outputDiv');
+
+                display.innerHTML = 'Your Final Grade Is: ' + total;
+      
+            }
+        </script>
+    </div>
+
+</div>
+    <br>
+    <br>
+    <div style="display: flex; justify-content: center;"><button type="submit" style="height: 50px; width: 200px;" onclick="calculator()">Calculate Your Grade</button></div>
+    <br>
+    <br>
+    <br>
+    <div style="display: flex; justify-content: center; padding-bottom: 100px;" id="outputDiv">@ViewBag.corrent</div> <!--Im outputting the correct value but it dissapears when the page refresses on post-->
+}

@@ -1,0 +1,201 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Melissa's First ASP.Net";
+}
+
+    <!-- Masthead-->
+    <header class="masthead bg-primary text-white text-center mainHeaderIMG">
+        <div class="container d-flex align-items-center flex-column">
+            <!-- Masthead Avatar Image-->
+
+            <img style="position: aboslute; padding-bottom: 40px;" src="assets/img/IMG_3752.jpg" width="500px" alt="Group of friends with Melissa">
+            <!--<img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />-->
+            <!-- Masthead Heading-->
+            <h1 class="masthead-heading text-uppercase mb-0">Melissa Robles</h1>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Masthead Subheading-->
+            <p class="masthead-subheading font-weight-light mb-0">Here's an image of me (left on the white door) doing something fun with friends.<br> I love to explore unique places, hang out with friends, and be in nature.</p>
+        </div>
+    </header>
+    <!-- Calculator Section-->
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
+            <!-- Calculator Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Grade Calculator</h2><br><br>
+            <div style="display: flex; justify-content: center;"><p style="position: relative; ">Click Here To Use The Calculator!</p></div>
+            <!--Calculator Container-->
+            <!--<div style="position: relative; display: flex; justify-content: center;">
+            <div style="width: 50%;">
+                <table style="padding: 10px; position: relative; width: 100%;">
+                    <tr>
+                        <td>Category</td>
+                        <td>Weight</td>
+                        <td>Grade</td>
+                    </tr>
+
+                    <tr>
+                        <td>Assignments</td>
+                        <td>55%</td>
+                        <td><input type="text" id="assignments" size=2 value=""></td>
+                    </tr>
+
+                    <tr>
+                        <td>Group Project</td>
+                        <td>5%</td>
+                        <td><input type="text" id="groupProject" size=2 value=""></td>
+                    </tr>
+
+                    <tr>
+                        <td>Quizzes</td>
+                        <td>10%</td>
+                        <td><input type="text" id="quizzes" size=2 value=""></td>
+                    </tr>
+
+                    <tr>
+                        <td>Exams</td>
+                        <td>20%</td>
+                        <td><input type="text" id="exams" size=2 value=""></td>
+                    </tr>
+
+                    <tr>
+                        <td>INTEX</td>
+                        <td>10%</td>
+                        <td><input type="text" id="intex" size=2 value=""></td>
+                    </tr>
+
+                    <br>
+                    <br>
+                </table>
+            </div>
+
+            <script type="text/javascript">
+
+                function calculator() {
+                    var grade1 = parseFloat(document.getElementById('assignments').value * 0.55);
+                    var grade2 = parseFloat(document.getElementById('groupProject').value * 0.05);
+                    var grade3 = parseFloat(document.getElementById('quizzes').value * 0.10);
+                    var grade4 = parseFloat(document.getElementById('exams').value * 0.20);
+                    var grade5 = parseFloat(document.getElementById('intex').value * 0.10);
+                    var total = grade1 + grade2 + grade3 + grade4 + grade5;
+
+                    var display = document.getElementById('outputDiv');
+
+                    display.innerHTML = 'Your Final Grade Is: ' + total;
+                }
+            </script>
+        </div>
+
+    </div>
+    <br><br>
+    <div style="display: flex; justify-content: center;"><input type="button" value="Calculate Your Grade" style="height: 50px; width: 200px;" onclick="calculator()"></div>
+    <br>
+    <br><br>
+    <div style="display: flex; justify-content: center;" id="outputDiv"></div>-->
+    <div style="display: flex; justify-content: center;"><a asp-controller="Blah" asp-action="Calculator"><input type="button" value="Grade Calculator" style="height: 50px; width: 200px;"></a></div>
+    <br>
+</section>
+    <!-- About Section-->
+    <section class="page-section bg-primary text-white mb-0" id="about">
+        <div class="container">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- About Section Content-->
+            <div class="row">
+                <div class="col-lg-4 ms-auto"><p class="lead">From IS 413 I hope to understand and retain the knowledge I gain on ASP.Net, C#, WebApps, and More. I'm happy I can put these things, and more, on my resume and can't wait to use them in my future career. Last I hope to gain some amazing new friends through the junior core.</p></div>
+                <div class="col-lg-4 me-auto">
+                    <p class="lead">Below are my top companies I want to pursue when or before I graduate:</p><ul>
+                        <li>Pluralsight</li>
+                        <li>Adobe</li>
+                        <li>Spotify</li>
+                        <li>Lucid</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Contact Section-->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <!-- Contact Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Contact Section Form-->
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- * * SB Forms Contact Form * *-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- This form is pre-integrated with SB Forms.-->
+                    <!-- To make this form functional, sign up at-->
+                    <!-- https://startbootstrap.com/solution/contact-forms-->
+                    <!-- to get an API token!-->
+                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <!-- Name input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                            <label for="name">Full name</label>
+                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                        </div>
+                        <!-- Email address input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                            <label for="email">Email address</label>
+                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                        </div>
+                        <!-- Phone number input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                            <label for="phone">Phone number</label>
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                        </div>
+                        <!-- Message input-->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                            <label for="message">Message</label>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                        </div>
+                        <!-- Submit success message-->
+                        <!---->
+                        <!-- This is what your users will see when the form-->
+                        <!-- has successfully submitted-->
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">Form submission successful!</div>
+                                To activate this form, sign up at
+                                <br />
+                                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                            </div>
+                        </div>
+                        <!-- Submit error message-->
+                        <!---->
+                        <!-- This is what your users will see when there is-->
+                        <!-- an error submitting the form-->
+                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                        <!-- Submit Button-->
+                        <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
